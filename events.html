@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1>Javascript events</h1>
+
+<p id="p1"></p>
+<script>
+setInterval("focus()",1);
+function focus()
+{
+var str;
+if(document.hasFocus())
+{str="GotFocus";
+}
+else
+{
+str="LostFocus";
+}
+document.getElementById("p1").innerHTML =str;
+}
+</script>
+
+</body>
+</html>
