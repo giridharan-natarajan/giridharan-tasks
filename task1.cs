@@ -1,28 +1,75 @@
 using System;
-class inherit
+abstract class Calculator
 {
-public void Add(int n1,int n2)
+public abstract void Arithmetic();
+}
+
+class Addition:Calculator
 {
-Console.WriteLine(n1+n2);
-Console.WriteLine(n1-n2);
+public override void Arithmetic( )
+{
+int a=30;
+int b=40;
+int sum;
+Console.WriteLine("ADD");
+sum=a+b;
+Console.WriteLine(sum);
 }
 }
-class inheritance:inherit
+
+
+class Subtract:Calculator
 {
-public void Mul(int n1,double n2)
+public override void Arithmetic()
 {
-Console.WriteLine(n1*n2);
-Console.WriteLine(n1/n2);
+ int c=30;
+ int d=40;
+int sub;
+Console.WriteLine("SUB");
+sub=d-c;
+Console.WriteLine(sub);
 }
 }
-class task1
+
+
+class Multiply:Calculator
+{
+public override void Arithmetic()
+{
+ int e=30;
+int f=50;
+int mul;
+Console.WriteLine("MUL");
+mul=e*f;
+Console.WriteLine(mul);
+}
+}
+
+
+class Divide:Calculator
+{
+public override void Arithmetic()
+{
+int g=300;
+int h=30;
+int div;
+Console.WriteLine("DIV");
+div=g/h;
+Console.WriteLine(div);
+}
+}
+class task
 {
 public static void Main()
 {
-inheritance obj=new inheritance();
-Console.WriteLine("Add and sub");
-obj.Add(22,30);
-Console.WriteLine("Mul and div");
-obj.Mul(25,33.5);
+Addition aobj = new Addition();
+aobj.Arithmetic();
+Subtract sobj = new Subtract();
+sobj.Arithmetic();
+Multiply mobj = new Multiply();
+mobj.Arithmetic();
+Divide dobj = new Divide();
+dobj.Arithmetic();
+
 }
 }
