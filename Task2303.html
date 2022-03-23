@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <<script type="text/javascript">
+    var login_attempts = 3;
+    function check_frm() {
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+        
+        if (name == "jarvis" && pass == "Giridharan") {
+            alert("SuccessFully Logged In");
+
+        }
+        else {
+            if (login_attempts == 0) {
+                alert("no login attempts");
+             
+            }
+            else {
+                login_attempts = login_attempts - 1;
+                alert("Login Failed " + login_attempts+"available");
+                
+                
+            }
+        }
+
+        return false;
+    }</script>
+</head>
+<body>
+    <h2>Login with your Credentials</h2>
+    <div id="wrapper">
+
+        <form id="form1" method="post" action="" onsubmit="return check_frm();">
+            <p id="login_label">USER LOGIN</p>
+            <p>name</p>
+            <input type="text" id="name" placeholder="Enter Username">
+            <br><p>password</p>
+            <input type="password" id="pass" placeholder="Enter Password">
+            <br>
+            <input type="submit" value="SUBMIT">
+
+            <br>
+        </form>
+
+    </div>
+</body>
+
+</html>
